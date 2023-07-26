@@ -4,11 +4,13 @@ from bricks import Bricks
 from base_movement import Base_movement
 from ball import Ball
 from lives import Lives
+from instruction import Instruction
 
 screen = Screen()
 screen.setup(width=900, height=600)
 screen.title("Breakout game")
 screen.bgcolor("black")
+
 
 ##FUNCTION THAT STARTS THE GAME
 def start_game():
@@ -16,6 +18,7 @@ def start_game():
     ball = Ball()
     scores = Scoreboard()
     lives = Lives()
+    Instruction()
     ##LIST OF ALL THE COLOURS FROM ATARI
     brick_color_list = ['blue', 'green', 'yellow', 'red']
     brick_list = []
@@ -28,7 +31,6 @@ def start_game():
             x = -420 + (74.55 * n)
             brick.set_positioning(x, y)
             brick_list.append(brick)
-
 
     screen.listen()
 

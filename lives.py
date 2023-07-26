@@ -22,3 +22,4 @@ class Lives(Turtle):
         self.lives -= 1
         self.live()
         return self.lives
+
